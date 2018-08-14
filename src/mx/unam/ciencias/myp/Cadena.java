@@ -1,3 +1,4 @@
+package mx.unam.ciencias.myp.Cadena;
 /**
  * Clase para realizar operaciones con cadenas
  */
