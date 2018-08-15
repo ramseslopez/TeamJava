@@ -6,9 +6,11 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 import mx.unam.ciencias.myp.Cadena;
 /**
- * 
+ *
  */
 public class TestCadena{
+
+    private Cadena cad;
 
     @Test
     public void testConstructor(){
@@ -16,7 +18,9 @@ public class TestCadena{
     }
     @Test
     public void testConcatenacion(){
-
+      Assert.assertTrue(cad.concatenacion());
+      String c = " ";
+      Assert.assertTrue(cad.concatenacion() == cad + c);
     }
 
     /**
@@ -32,7 +36,9 @@ public class TestCadena{
 
     @Test
     public void testPalindromo(){
-
+      Assert.assertTrue(cad.palindromo());
+      String aux = cad.reversa();
+      Assert.assertTrue(aux == cad);
     }
 
     @Test
@@ -42,6 +48,6 @@ public class TestCadena{
 
     @Test
     public void testQuitaEspacios(){
-        
+
     }
 }
