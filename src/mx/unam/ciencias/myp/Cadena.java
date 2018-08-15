@@ -1,4 +1,4 @@
-package mx.unam.ciencias.myp.Cadena;
+package mx.unam.ciencias.myp;
 /**
  * Clase para realizar operaciones con cadenas
  */
@@ -22,7 +22,11 @@ public class Cadena{
      * 
      */
     public String reversa(){
-        return "";
+        String reversa = "";
+        for(int i = cad.length() - 1; i >= 0; i--){
+            reversa += cad.charAt(i);
+        }
+        return reversa;
     }
 
      /**
