@@ -14,13 +14,13 @@ public class TestCadena{
 
     @Test
     public void testConstructor(){
-
+        cad = new Cadena("");
     }
     @Test
     public void testConcatenacion(){
-      Assert.assertTrue(cad.concatenacion());
+      Assert.assertFalse(cad.concatenacion("1").equals(cad));
       String c = " ";
-      Assert.assertTrue(cad.concatenacion() == cad + c);
+      Assert.assertTrue(cad.concatenacion(" ").equals(cad + c));
     }
 
     /**
@@ -38,7 +38,7 @@ public class TestCadena{
     public void testPalindromo(){
       Assert.assertTrue(cad.palindromo());
       String aux = cad.reversa();
-      Assert.assertTrue(aux == cad);
+      Assert.assertTrue(aux.equals(cad.toString()));
     }
 
     @Test

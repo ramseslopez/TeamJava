@@ -33,9 +33,11 @@ public class Cadena{
       *
       */
     public boolean palindromo(){
-        String aux = cad;
-        if(aux.reversa() == cad)
+        
+        Cadena aux = new Cadena(cad);
+        if(aux.reversa().toString().equals(cad))
           return true;
+        return false;
     }
 
       /**
@@ -50,5 +52,12 @@ public class Cadena{
        */
     public String quitaEspacios(){
         return "";
+    }
+
+    /**
+     * 
+     */
+    public String toString(){
+        return cad;
     }
 }
